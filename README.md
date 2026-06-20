@@ -1,5 +1,35 @@
-# Vue 3 + Vite
+# 🎉 Santos Populares 2026
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Aplicação web para descobrir e gerir eventos dos Santos Populares em Portugal.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## 🚀 Funcionalidades
+
+- 📅 Explorar eventos por cidade (Lisboa, Porto, Braga)
+- 🔍 Filtrar por tipo de evento, data e localização
+- ❤️ Guardar eventos favoritos
+- 🎨 Dois temas: Folk (tradicional) e Festivo (moderno)
+- 📱 Design responsivo (mobile-first)
+
+## 🛠️ Tecnologias
+
+- Vue 3 (Composition API)
+- Vite
+- CSS3 (Variables, Grid, Flexbox)
+- localStorage
+
+## 📦 Instalação
+
+```bash
+npm install
+npm run dev
+```
+
+## Próximos passos
+
+- Adicionar mais eventos
+- Implementar mapa interativo
+- Backend com Node.js/Express
+
+## 📄 Licença
+MIT
+
