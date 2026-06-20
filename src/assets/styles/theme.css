@@ -1,0 +1,62 @@
+:root {
+  /* FOLK Theme (default - traditional) */
+  --color-primary: #D32F2F;
+  --color-secondary: #388E3C;
+  --color-tertiary: #FBC02D;
+  --color-quaternary: #1976D2;
+  
+  --color-background: #FFF8E1;
+  --color-background-card: #FFFFFF;
+  --color-text: #2C1810;
+  --color-text-light: #5D4037;
+  
+  --color-border: #EFEBE9;
+  --color-shadow: rgba(44, 24, 16, 0.1);
+  
+  /* Typography */
+  --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-display: 'Georgia', serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  
+  /* Event type colors */
+  --type-marcha: #E91E63;
+  --type-arraial: #FF9800;
+  --type-concerto: #9C27B0;
+  --type-sardinhada: #FF5722;
+  --type-feira: #4CAF50;
+  --type-tradicional: #795548;
+}
+
+/* FESTIVE Theme (modern/dark) */
+[data-theme="festive"] {
+  --color-primary: #FF5252;
+  --color-secondary: #69F0AE;
+  --color-tertiary: #FFD740;
+  --color-quaternary: #40C4FF;
+  
+  --color-background: #1A1A2E;
+  --color-background-card: #16213E;
+  --color-text: #EAEAEA;
+  --color-text-light: #B0B0B0;
+  
+  --color-border: #0F3460;
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  
+  --glow: 0 0 20px rgba(255, 82, 82, 0.3);
+}
