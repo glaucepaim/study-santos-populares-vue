@@ -104,6 +104,7 @@ npm run lint         # Lint code (if configured)
 
 ## 🎯 Future Enhancements
 
+- Create scroll pagination
 - Backend API with Node.js/Express
 - User authentication system
 - Event creation and management
