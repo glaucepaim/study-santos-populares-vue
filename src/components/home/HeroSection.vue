@@ -8,14 +8,6 @@
         <p class="hero-subtitle">
           Descobre os melhores arraiais, marchas e festas populares em Lisboa, Porto e Braga
         </p>
-        <div class="hero-cta">
-          <a href="#eventos" class="btn btn-primary">
-            Explorar Eventos
-          </a>
-          <a href="#sobre" class="btn btn-secondary">
-            Saber Mais
-          </a>
-        </div>
       </div>
       
       <div class="hero-countdown">
@@ -50,6 +42,7 @@ const proximaFesta = ref(new Date('2026-06-24T00:00:00'))
   grid-template-columns: 1fr 1fr;
   gap: var(--espacamento-xl);
   align-items: center;
+  padding: var(--spacing-xs) 0;
   position: relative;
   z-index: 1;
 }
