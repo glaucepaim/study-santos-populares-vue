@@ -77,12 +77,11 @@
           class="filter-input"
         />
       </div>
-    </div>
-    
-    <div class="filters-actions">
-      <button @click="$emit('clear')" class="btn-clear">
-        🗑️ Limpar filtros
-      </button>
+      <div class="filter-group button-filter">
+        <button @click="$emit('clear')" class="btn-clear">
+          Limpar filtros
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -135,9 +134,9 @@ const formatType = (type) => {
 .filters-container {
   background-color: var(--color-background-card);
   padding: var(--spacing-lg);
-  border-radius: var(--radius-lg);
   box-shadow: 0 4px 12px var(--color-shadow);
   margin-bottom: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
 }
 
 .filters-grid {
@@ -151,6 +150,9 @@ const formatType = (type) => {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
+  &.button-filter {
+    flex-direction: column-reverse;
+  } 
 }
 
 .filter-label {
@@ -185,8 +187,8 @@ const formatType = (type) => {
 
 .btn-clear {
   padding: var(--spacing-sm) var(--spacing-lg);
-  background-color: var(--color-tertiary);
-  color: var(--color-text);
+  background-color: var(--color-primary);
+  color:  var(--color-text-primary);
   border: none;
   border-radius: var(--radius-md);
   cursor: pointer;
@@ -196,8 +198,7 @@ const formatType = (type) => {
 
 .btn-clear:hover {
   background-color: var(--color-primary);
-  color: white;
-  transform: translateY(-2px);
+  color: var(--color-text-primary);
 }
 
 @media (max-width: 768px) {

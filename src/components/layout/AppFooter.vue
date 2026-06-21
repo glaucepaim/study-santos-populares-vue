@@ -21,10 +21,10 @@
 
 <style scoped>
 .footer {
-  background-color: var(--cor-fundo-card);
+  background-color: var(--color-primary);
   border-top: 3px solid var(--cor-primaria);
   margin-top: var(--espacamento-xl);
-  padding: var(--espacamento-lg) 0;
+  padding: var(--spacing-sm) 0;
   transition: background-color var(--transicao-media);
 }
 
@@ -37,12 +37,12 @@
 }
 
 .footer-info h3 {
-  color: var(--cor-primaria);
+  color: var(--color-text-primary);
   margin-bottom: var(--espacamento-xs);
 }
 
 .footer-info p {
-  color: var(--cor-texto-claro);
+  color: var(--color-text-primary);
 }
 
 .footer-links {
@@ -53,7 +53,7 @@
 }
 
 .footer-link {
-  color: var(--cor-texto);
+  color: var(--color-text-primary);
   padding: var(--espacamento-xs) var(--espacamento-sm);
   border-radius: var(--raio-md);
   transition: all var(--transicao-rapida);
@@ -61,14 +61,14 @@
 
 .footer-link:hover {
   background-color: var(--cor-terciaria);
-  color: var(--cor-texto);
+  color: var(--color-text-primary);
 }
 
 .footer-copy {
   margin-top: var(--espacamento-sm);
   padding-top: var(--espacamento-sm);
   border-top: 1px solid var(--cor-borda);
-  color: var(--cor-texto-claro);
+  color: var(--color-text-primary);
   font-size: 0.875rem;
 }
 </style>

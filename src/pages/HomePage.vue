@@ -63,6 +63,6 @@ onMounted(() => {
 
 <style scoped>
 .main-content {
-  padding: var(--spacing-xl) 0;
+  padding: 0;
 }
 </style>

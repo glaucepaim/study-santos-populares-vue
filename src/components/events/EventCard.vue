@@ -88,7 +88,6 @@ const formatType = (type) => {
 <style scoped>
 .event-card {
   background-color: var(--color-background-card);
-  border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 4px 12px var(--color-shadow);
   transition: all var(--transition-medium);

@@ -1,21 +1,22 @@
 :root {
   /* FOLK Theme (default - traditional) */
-  --color-primary: #D32F2F;
+  --color-primary: #000000;
   --color-secondary: #388E3C;
   --color-tertiary: #FBC02D;
   --color-quaternary: #1976D2;
   
-  --color-background: #FFF8E1;
+  --color-background: #F9FBFC;
   --color-background-card: #FFFFFF;
   --color-text: #2C1810;
+  --color-text-primary: #FFFFFF;
   --color-text-light: #5D4037;
   
   --color-border: #EFEBE9;
   --color-shadow: rgba(44, 24, 16, 0.1);
   
   /* Typography */
-  --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-display: 'Georgia', serif;
+  --font-primary: "Roboto", sans-serif;
+  --font-display: "Roboto", sans-serif;
   
   /* Spacing */
   --spacing-xs: 0.5rem;

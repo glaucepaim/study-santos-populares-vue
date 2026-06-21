@@ -63,7 +63,7 @@ defineEmits(['retry', 'clear-filters', 'toggle-favorite', 'view-details'])
 
 <style scoped>
 .event-grid-section {
-  padding: var(--spacing-xl) 0;
+  padding: 0;
 }
 
 .section-title {
