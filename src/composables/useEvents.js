@@ -1,5 +1,5 @@
 import { ref, computed } from 'vue'
-import { fetchEvents, filterEvents, sortEvents } from '../services/eventService'
+import { fetchEvents, filterEvents, sortEvents } from '../services/eventsService'
 
 export function useEvents() {
   const events = ref([])

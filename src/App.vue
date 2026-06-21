@@ -7,24 +7,28 @@
       <section class="main-content">
         <div class="container">
           <EventFilters
-            :filtros="filtros"
-            :ordenacao="ordenacao"
-            :cidades="cidades"
-            :tipos="tipos"
-            @update:filtros="filtros = $event"
-            @update:ordenacao="ordenacao = $event"
-            @limpar="limparFiltros"
+            :filters="filters"
+            :sortBy="sortBy"
+            :cities="cities"
+            :types="types"
+            @update:search="filters.search = $event"
+            @update:city="filters.city = $event"
+            @update:type="filters.type = $event"
+            @update:sortBy="sortBy = $event"
+            @update:startDate="filters.startDate = $event"
+            @update:endDate="filters.endDate = $event"
+            @clear="clearFilters"
           />
           
           <EventGrid
-            :eventos="eventosFiltrados"
+            :events="filteredEvents"
             :loading="loading"
             :error="error"
-            :favoritos="favoritos"
-            @retry="carregarEventos"
-            @clear-filters="limparFiltros"
-            @toggle-favorite="toggleFavorito"
-            @view-details="verDetalhes"
+            :favorites="favorites"
+            @retry="loadEvents"
+            @clear-filters="clearFilters"
+            @toggle-favorite="toggleFavorite"
+            @view-details="viewDetails"
           />
         </div>
       </section>
@@ -44,32 +48,31 @@ import { useEvents } from './composables/useEvents'
 import { useFavorites } from './composables/useFavorites'
 
 const {
-  eventosFiltrados,
+  filteredEvents,
   loading,
   error,
-  filtros,
-  ordenacao,
-  cidades,
-  tipos,
-  carregarEventos,
-  limparFiltros
+  filters,
+  sortBy,
+  cities,
+  types,
+  loadEvents,
+  clearFilters
 } = useEvents()
 
-const { favoritos, toggleFavorito } = useFavorites()
+const { favorites, toggleFavorite } = useFavorites()
 
-const verDetalhes = (evento) => {
-  console.log('Ver detalhes:', evento)
-  // Futuro: navegar para página de detalhes
+const viewDetails = (event) => {
+  console.log('View details:', event)
 }
 
 onMounted(() => {
-  carregarEventos()
+  loadEvents()
 })
 </script>
 
 <style>
-@import './assets/styles/variables.css';
-@import './assets/styles/base.css';
+@import './assets/styles/theme.css';
+@import './assets/styles/global.css';
 
 #app {
   min-height: 100vh;
@@ -82,6 +85,6 @@ main {
 }
 
 .main-content {
-  padding: var(--espacamento-xl) 0;
+  padding: var(--spacing-xl) 0;
 }
 </style>
