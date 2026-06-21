@@ -2,7 +2,7 @@
   <article class="event-card" :class="{ featured: event.featured }">
     <div class="event-image">
       <img :src="event.image" :alt="event.name" loading="lazy" />
-      <span class="event-badge" v-if="event.featured">⭐ Featured</span>
+      <span class="event-badge" v-if="event.featured">⭐ Apresentou</span>
       <span class="event-type-badge" :class="event.type">
         {{ formatType(event.type) }}
       </span>
@@ -15,7 +15,7 @@
           class="favorite-btn"
           :class="{ active: isFavorite }"
           @click.stop="$emit('toggle-favorite', event.id)"
-          :aria-label="isFavorite ? 'Remove from favorites' : 'Add to favorites'"
+          :aria-label="isFavorite ? 'Remover dos favoritos' : 'Adicionar aos favoritos'"
         >
           {{ isFavorite ? '❤️' : '🤍' }}
         </button>
@@ -43,7 +43,7 @@
       </div>
       
       <button class="btn-details" @click="$emit('view-details', event)">
-        View Details
+        Ver detalhes
       </button>
     </div>
   </article>

@@ -1,7 +1,7 @@
 <template>
   <section id="events" class="event-grid-section">
     <div class="container">
-      <h2 class="section-title">Available Events</h2>
+      <h2 class="section-title">Eventos disponíveis</h2>
       
       <div v-if="loading" class="loading-state">
         <div class="spinner"></div>
@@ -10,12 +10,12 @@
       
       <div v-else-if="error" class="error-state">
         <p>❌ {{ error }}</p>
-        <button @click="$emit('retry')" class="btn-retry">Try Again</button>
+        <button @click="$emit('retry')" class="btn-retry">Tente novamente</button>
       </div>
       
       <div v-else-if="events.length === 0" class="empty-state">
-        <p>🎉 No events found with current filters.</p>
-        <button @click="$emit('clear-filters')" class="btn-clear">Clear Filters</button>
+        <p>🎉 Nenhum evento encontrado com os filtros atuais.</p>
+        <button @click="$emit('clear-filters')" class="btn-clear">Limpar filtros</button>
       </div>
       
       <div v-else class="event-grid">

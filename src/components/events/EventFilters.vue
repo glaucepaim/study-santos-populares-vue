@@ -2,7 +2,7 @@
   <div class="filters-container">
     <div class="filters-grid">
       <div class="filter-group">
-        <label for="search" class="filter-label">Search</label>
+        <label for="search" class="filter-label">Pesquisar</label>
         <input
           id="search"
           type="text"
@@ -14,7 +14,7 @@
       </div>
       
       <div class="filter-group">
-        <label for="city" class="filter-label">City</label>
+        <label for="city" class="filter-label">Cidade</label>
         <select 
           id="city" 
           :value="filters.city"
@@ -28,7 +28,7 @@
       </div>
       
       <div class="filter-group">
-        <label for="type" class="filter-label">Event Type</label>
+        <label for="type" class="filter-label">Evento</label>
         <select 
           id="type" 
           :value="filters.type"
@@ -42,22 +42,22 @@
       </div>
       
       <div class="filter-group">
-        <label for="sort" class="filter-label">Sort by</label>
+        <label for="sort" class="filter-label">Ordenar</label>
         <select 
           id="sort" 
           :value="sortBy"
           @change="$emit('update:sortBy', $event.target.value)"
           class="filter-select"
         >
-          <option value="date">Date</option>
-          <option value="name">Name</option>
-          <option value="city">City</option>
-          <option value="price">Price</option>
+          <option value="date">Data</option>
+          <option value="name">Nome</option>
+          <option value="city">Cidade</option>
+          <option value="price">Preço</option>
         </select>
       </div>
       
       <div class="filter-group">
-        <label for="startDate" class="filter-label">Start Date</label>
+        <label for="startDate" class="filter-label">Data de início</label>
         <input
           id="startDate"
           type="date"
@@ -68,7 +68,7 @@
       </div>
       
       <div class="filter-group">
-        <label for="endDate" class="filter-label">End Date</label>
+        <label for="endDate" class="filter-label">Data de término</label>
         <input
           id="endDate"
           type="date"
@@ -81,7 +81,7 @@
     
     <div class="filters-actions">
       <button @click="$emit('clear')" class="btn-clear">
-        🗑️ Clear Filters
+        🗑️ Limpar filtros
       </button>
     </div>
   </div>
