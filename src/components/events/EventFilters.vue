@@ -204,5 +204,20 @@ const formatType = (type) => {
   .filters-grid {
     grid-template-columns: 1fr;
   }
+  
+  .filters-container {
+    padding: var(--spacing-md);
+  }
+  
+  .filter-input,
+  .filter-select {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-clear {
+    width: 100%;
+  }
 }
 </style>

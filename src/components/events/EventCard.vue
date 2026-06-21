@@ -236,5 +236,28 @@ const formatType = (type) => {
   .event-meta {
     grid-template-columns: 1fr;
   }
+  
+  .event-title {
+    font-size: 1.125rem;
+  }
+  
+  .event-description {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-image {
+    height: 180px;
+  }
+  
+  .event-content {
+    padding: var(--spacing-sm);
+  }
+  
+  .btn-details {
+    font-size: 0.875rem;
+    padding: var(--spacing-xs);
+  }
 }
 </style>
