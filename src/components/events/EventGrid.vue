@@ -30,7 +30,7 @@
       </div>
       
       <div v-if="!loading && events.length > 0" class="event-count">
-        <p>{{ events.length }} event{{ events.length !== 1 ? 's' : '' }} found</p>
+        <p>{{ events.length }} evento{{ events.length !== 1 ? 's' : '' }} encontrado</p>
       </div>
     </div>
   </section>
@@ -124,9 +124,11 @@ defineEmits(['retry', 'clear-filters', 'toggle-favorite', 'view-details'])
   text-align: center;
   margin-top: var(--spacing-lg);
   padding-top: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
   border-top: 2px solid var(--color-border);
   color: var(--color-text-light);
   font-size: 0.9rem;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {

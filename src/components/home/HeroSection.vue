@@ -30,19 +30,17 @@ const proximaFesta = ref(new Date('2026-06-24T00:00:00'))
 <style scoped>
 .hero {
   position: relative;
-  padding: var(--espacamento-xl) 0;
-  background: linear-gradient(135deg, 
-    var(--cor-primaria) 0%, 
-    var(--cor-secundaria) 100%);
+  padding: var(--spacing-lg) 0;
   overflow: hidden;
 }
 
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--espacamento-xl);
+  gap: var(--spacing-lg);
   align-items: center;
-  padding: var(--spacing-xs) 0;
+  max-width: 1142px;
+  padding: var(--spacing-lg) 0;
   position: relative;
   z-index: 1;
 }
@@ -50,44 +48,42 @@ const proximaFesta = ref(new Date('2026-06-24T00:00:00'))
 .hero-title {
   font-size: 3rem;
   color: var(--color-text);
-  margin-bottom: var(--espacamento-md);
+  margin-bottom: var(--spacing-md);
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 .highlight {
   display: inline-block;
-  background-color: var(--cor-terciaria);
-  color: var(--cor-texto);
-  padding: var(--espacamento-xs) var(--espacamento-md);
-  border-radius: var(--raio-lg);
+  color: var(--color-text);
+  padding: var(--spacing-lg) var(--spacing-md);
   transform: rotate(-2deg);
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: var(--cor-texto);
-  margin-bottom: var(--espacamento-lg);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-lg);
   line-height: 1.6;
 }
 
 .hero-cta {
   display: flex;
-  gap: var(--espacamento-md);
+  gap: var(--spacing-md);
   flex-wrap: wrap;
 }
 
 .btn {
-  padding: var(--espacamento-sm) var(--espacamento-lg);
-  border-radius: var(--raio-xl);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-xl);
   font-weight: 600;
   font-size: 1rem;
-  transition: all var(--transicao-rapida);
+  transition: all var(--transition-fast);
   display: inline-block;
 }
 
 .btn-primary {
-  background-color: var(--cor-terciaria);
-  color: var(--cor-texto);
+  background-color: var(--color-tertiary);
+  color: var(--color-text);
 }
 
 .btn-primary:hover {
@@ -97,11 +93,11 @@ const proximaFesta = ref(new Date('2026-06-24T00:00:00'))
 
 .btn-secondary {
   background-color: white;
-  color: var(--cor-primaria);
+  color: var(--color-primary);
 }
 
 .btn-secondary:hover {
-  background-color: var(--cor-fundo);
+  background-color: var(--color-background);
 }
 
 .hero-countdown {

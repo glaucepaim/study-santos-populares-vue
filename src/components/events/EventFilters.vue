@@ -136,7 +136,7 @@ const formatType = (type) => {
   padding: var(--spacing-lg);
   box-shadow: 0 4px 12px var(--color-shadow);
   margin-bottom: var(--spacing-xl);
-  margin-top: var(--spacing-xl);
+  margin-top: var(--spacing-lg);
 }
 
 .filters-grid {
