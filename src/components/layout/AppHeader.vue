@@ -5,6 +5,18 @@
         <span class="logo-icon">🎉</span>
         <h1 class="logo-text">Santos Populares</h1>
       </div>
+      
+      <nav class="nav">
+        <router-link to="/" class="nav-link">Eventos</router-link>
+        <button 
+          @click="toggleTheme" 
+          class="theme-toggle"
+          :aria-label="`Switch to ${currentTheme === 'folk' ? 'festive' : 'folk'} theme`"
+        >
+          <span class="theme-icon">{{ currentTheme === 'folk' ? '🌙' : '☀️' }}</span>
+          <span class="theme-text">{{ currentTheme === 'folk' ? 'Festive' : 'Folk' }}</span>
+        </button>
+      </nav>
     </div>
   </header>
 </template>
@@ -12,12 +24,26 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const temaAtual = ref('folk')
+const STORAGE_KEY = 'app-theme'
+const currentTheme = ref('folk')
+
+const applyTheme = (theme) => {
+  currentTheme.value = theme
+  document.documentElement.setAttribute('data-theme', theme)
+}
+
+const toggleTheme = () => {
+  const newTheme = currentTheme.value === 'folk' ? 'festive' : 'folk'
+  applyTheme(newTheme)
+  localStorage.setItem(STORAGE_KEY, newTheme)
+}
 
 onMounted(() => {
-  const temaGuardado = localStorage.getItem('tema') || 'folk'
-  temaAtual.value = temaGuardado
-  document.documentElement.setAttribute('data-tema', temaGuardado)
+  // Apenas aplicar o tema guardado, sem forçar 'folk'
+  const savedTheme = localStorage.getItem(STORAGE_KEY)
+  if (savedTheme) {
+    applyTheme(savedTheme)
+  }
 })
 </script>
 
@@ -25,7 +51,7 @@ onMounted(() => {
 .header {
   background-color: var(--cor-fundo-card);
   box-shadow: 0 2px 8px var(--cor-sombra);
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 100;
   transition: background-color var(--transicao-media);
