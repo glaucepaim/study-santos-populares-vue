@@ -56,7 +56,7 @@ const proximaFesta = ref(new Date('2026-06-24T00:00:00'))
 
 .hero-title {
   font-size: 3rem;
-  color: white;
+  color: var(--color-text);
   margin-bottom: var(--espacamento-md);
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
@@ -72,7 +72,7 @@ const proximaFesta = ref(new Date('2026-06-24T00:00:00'))
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: rgba(255,255,255,0.95);
+  color: var(--cor-texto);
   margin-bottom: var(--espacamento-lg);
   line-height: 1.6;
 }

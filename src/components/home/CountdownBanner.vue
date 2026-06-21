@@ -88,7 +88,7 @@ onUnmounted(() => {
   background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
   padding: var(--espacamento-md);
   border-radius: var(--raio-lg);
-  color: white;
+  color: var(--cor-texto);
 }
 
 .countdown-value {

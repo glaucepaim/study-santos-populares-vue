@@ -5,27 +5,27 @@
     <section class="main-content">
       <div class="container">
         <EventFilters
-          :filters="filters"
-          :sortBy="sortBy"
-          :cities="cities"
-          :types="types"
-          @update:search="filters.search = $event"
-          @update:city="filters.city = $event"
-          @update:type="filters.type = $event"
-          @update:sortBy="sortBy = $event"
-          @update:startDate="filters.startDate = $event"
-          @update:endDate="filters.endDate = $event"
-          @clear="clearFilters"
+          :filters="state.filters"
+          :sortBy="state.sortBy"
+          :cities="state.cities"
+          :types="state.types"
+          @update:search="updateFilter('search', $event)"
+          @update:city="updateFilter('city', $event)"
+          @update:type="updateFilter('type', $event)"
+          @update:sortBy="state.sortBy = $event"
+          @update:startDate="updateFilter('startDate', $event)"
+          @update:endDate="updateFilter('endDate', $event)"
+          @clear="state.clearFilters()"
         />
         
         <EventGrid
-          :events="filteredEvents"
-          :loading="loading"
-          :error="error"
-          :favorites="favorites"
-          @retry="loadEvents"
-          @clear-filters="clearFilters"
-          @toggle-favorite="toggleFavorite"
+          :events="state.filteredEvents"
+          :loading="state.loading"
+          :error="state.error"
+          :favorites="favoritesState.favorites"
+          @retry="state.loadEvents()"
+          @clear-filters="state.clearFilters()"
+          @toggle-favorite="favoritesState.toggleFavorite($event)"
           @view-details="viewDetails"
         />
       </div>
@@ -34,42 +34,35 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, reactive } from 'vue'
 import { useRouter } from 'vue-router'
-import { useEvents } from '../composables/useEvents'
-import { useFavorites } from '../composables/useFavorites'
 import HeroSection from '../components/home/HeroSection.vue'
 import EventFilters from '../components/events/EventFilters.vue'
 import EventGrid from '../components/events/EventGrid.vue'
-
+import { useEvents } from '../composables/useEvents'
+import { useFavorites } from '../composables/useFavorites'
 
 const router = useRouter()
 
-const {
-  filteredEvents,
-  loading,
-  error,
-  filters,
-  sortBy,
-  cities,
-  types,
-  loadEvents,
-  clearFilters
-} = useEvents()
+// Manter o objeto completo para preservar reatividade
+const state = reactive(useEvents())
+const favoritesState = reactive(useFavorites())
 
-const { favorites, toggleFavorite } = useFavorites()
+const updateFilter = (key, value) => {
+  state.filters[key] = value
+}
 
 const viewDetails = (event) => {
   router.push({ name: 'EventDetails', params: { id: event.id } })
 }
 
 onMounted(() => {
-  loadEvents()
+  state.loadEvents()
 })
 </script>
 
 <style scoped>
-    .main-content {
-    padding: var(--spacing-xl) 0;
-    }
+.main-content {
+  padding: var(--spacing-xl) 0;
+}
 </style>

@@ -92,7 +92,7 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { fetchEvents } from '../services/eventService'
+import { fetchEvents } from '../services/eventsService'
 import { useFavorites } from '../composables/useFavorites'
 
 const route = useRoute()

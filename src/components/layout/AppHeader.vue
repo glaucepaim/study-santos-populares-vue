@@ -5,19 +5,6 @@
         <span class="logo-icon">🎉</span>
         <h1 class="logo-text">Santos Populares</h1>
       </div>
-      
-      <nav class="nav">
-        <a href="#eventos" class="nav-link">Eventos</a>
-        <a href="#sobre" class="nav-link">Sobre</a>
-        <button 
-          @click="alternarTema" 
-          class="theme-toggle"
-          :aria-label="`Mudar para tema ${temaAtual === 'folk' ? 'festivo' : 'folk'}`"
-        >
-          <span class="theme-icon">{{ temaAtual === 'folk' ? '🌙' : '☀️' }}</span>
-          <span class="theme-text">{{ temaAtual === 'folk' ? 'Festivo' : 'Folk' }}</span>
-        </button>
-      </nav>
     </div>
   </header>
 </template>
@@ -26,12 +13,6 @@
 import { ref, onMounted } from 'vue'
 
 const temaAtual = ref('folk')
-
-const alternarTema = () => {
-  temaAtual.value = temaAtual.value === 'folk' ? 'festivo' : 'folk'
-  document.documentElement.setAttribute('data-tema', temaAtual.value)
-  localStorage.setItem('tema', temaAtual.value)
-}
 
 onMounted(() => {
   const temaGuardado = localStorage.getItem('tema') || 'folk'
