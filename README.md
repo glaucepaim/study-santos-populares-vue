@@ -2,7 +2,9 @@
 
 A modern web application to discover and manage popular saints festivities across Portugal. Built with Vue 3 and designed for the Portuguese cultural context.
 
-![Santos Populares](https://img.shields.io/badge/Vue-3-42b883) ![License](https://img.shields.io/badge/license-MIT-blue) ![Status](https://img.shields.io/badge/status-active-success)
+![Santos Populares](https://img.shields.io/badge/Vue-3-42b883) ![Status](https://img.shields.io/badge/status-active-success)
+
+
 
 ## 🌟 Features
 
@@ -117,6 +119,13 @@ Glauce Paim Santos
 Frontend Developer Junior Candidate
 [glaucepaim@gmail.com] | [https://www.linkedin.com/in/glauce-paim/]
 
-## 📄 Licença
-MIT
+## 📜 Licença
 
+Este projeto está licenciado sob a licença [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.pt_BR).
+
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/deed.pt_BR)
+
+### Como citar este projeto
+Se você utilizar este material em suas pesquisas ou trabalhos, por favor, cite da seguinte forma:
+
+> Glauce Paim Santos. (2026). [Santos Populares]. Disponível em: (https://github.com/glaucepaim/study-santos-populares-vue). Licença CC BY-NC 4.0.
